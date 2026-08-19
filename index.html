@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Web Output #2</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        h1 {
+            font-size: 28px;
+        }
+
+        .form-group {
+            margin-bottom: 5px;
+        }
+
+        label {
+            display: inline-block;
+            width: 110px;
+        }
+
+        input {
+            width: 90px;
+            height: 18px;
+        }
+
+        button {
+            margin-top: 8px;
+            margin-right: 3px;
+            cursor: pointer;
+        }
+
+        fieldset {
+            margin-top: 15px;
+            width: 560px;
+        }
+
+        table {
+            border-collapse: collapse;
+            margin: 0 auto;
+            min-width: 295px;
+        }
+
+        th,
+        td {
+            padding: 5px 8px;
+            text-align: left;
+        }
+
+        th {
+            font-weight: bold;
+        }
+
+        #recordsTable {
+            display: none;
+        }
+
+        #noRecords {
+            color: red;
+        }
+
+        .bottom-controls {
+            margin-top: 8px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Javascript Web Output #2</h1>
+
+    <div class="form-group">
+        <label>First Name:</label>
+        <input type="text" id="firstName">
+    </div>
+
+    <div class="form-group">
+        <label>Middle Name:</label>
+        <input type="text" id="middleName">
+    </div>
+
+    <div class="form-group">
+        <label>Last Name:</label>
+        <input type="text" id="lastName">
+    </div>
+
+    <div class="form-group">
+        <label>Age:</label>
+        <input type="number" id="age">
+    </div>
+
+    <button id="mainButton">Insert</button>
+    <button id="clearInputButton">Clear</button>
+
+    <fieldset>
+        <legend>Records</legend>
+
+        <p id="noRecords">No Records...</p>
+
+        <table id="recordsTable">
+            <thead>
+                <tr>
+                    <th>First Name</th>
+                    <th>Middle Name</th>
+                    <th>Last Name</th>
+                    <th>Age</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+
+            <tbody id="recordsBody"></tbody>
+        </table>
+    </fieldset>
+
+    <div class="bottom-controls">
+        <button id="clearRecordsButton">Clear Records</button>
+
+        <label style="width: auto;">Sort by:</label>
+
+        <select id="sortField">
+            <option value="lastName">Last Name</option>
+            <option value="firstName">First Name</option>
+            <option value="middleName">Middle Name</option>
+            <option value="age">Age</option>
+        </select>
+
+        <select id="sortOrder">
+            <option value="asc">A-Z</option>
+            <option value="desc">Z-A</option>
+        </select>
+
+        <button id="saveButton">Save to Local Storage</button>
+    </div>
+
+    <script src="main.js"></script>
+
+</body>
+</html>
